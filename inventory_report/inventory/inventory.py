@@ -11,6 +11,8 @@ class Inventory:
             data = cls.read_csv(path)
         elif (path.endswith('.json')):
             data = cls.read_json(path)
+        elif (path.endswith('.xml')):
+            data = cls.read_json(path)
         return cls.select_type(data, report_type)
 
     @classmethod
